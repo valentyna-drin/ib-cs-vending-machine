@@ -22,11 +22,12 @@ public class Shelf
     quantities = new int [NUM_PRODUCT_TYPES];
     
     products [0] = Product.Beverage;
-    quantities [0] = 10;
+    quantities [0] = 2;
     products [1] = Product.Apple;
-    quantities [1] = 5;
+    quantities [1] = 1;
   }
 
+  // returns an array of products available (for which quantity is positive)
   public Product[] getAvailableProducts ()
   {
     java.util.ArrayList<Product> availableProducts = new java.util.ArrayList<> ();
@@ -37,13 +38,17 @@ public class Shelf
     return availableProducts.toArray (new Product [0]);
   }
   
+  // returns true if there are no more products to be sold and false
+  // otherwise
   public boolean isEmpty ()
   {
     // code to be written
     return false;
   }
   
-  public void decreaseQuantity (Product product)
+  // dispenses a product (that is, in this simple app just decreases
+  // its quantity by 1)
+  public void dispense (Product product)
   {
     // code to be written
   }

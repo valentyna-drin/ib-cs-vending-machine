@@ -13,7 +13,7 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-class VendingMachineApp
+public class VendingMachineApp
 {
   public static void main (String[] args)
   {
@@ -29,6 +29,7 @@ class VendingMachineApp
     }
   }
 
+  // application logic
   private static void run (Shelf shelf, UserInterface ui)
   {
     while (!shelf.isEmpty ())
@@ -36,7 +37,7 @@ class VendingMachineApp
       Product[] availableProducts = shelf.getAvailableProducts ();
       Product purchasedProduct = ui.getProduct (availableProducts);
       if (ui.verifyPayment (purchasedProduct))
-        shelf.decreaseQuantity (purchasedProduct);
+        shelf.dispense (purchasedProduct);
     }
   }
 }
