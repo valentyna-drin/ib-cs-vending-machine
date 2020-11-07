@@ -1,0 +1,47 @@
+* Simple vendimg machine application for practicing MVC
+** The purpose of this repository
+   This repository contains the bare bones of an application for
+   practicing model-view-controller (MVC) architecture..  
+
+** Installation in IDEA
+   To install the application in IDEA, do the following:
+   a) Clone the repository.
+   b) Right click on class =VendingMachineApp=.
+   c) Select =Run VendingMachineApp.main()=
+   You are now able to make changes to the project and run it again.
+
+** Java =enum=
+   In this application, data type =Product= is a Java =enum=, which
+   allows you to create a data type with a finite number of possible
+   values. In this case, the possible values of =Product= are
+   =Beverage= and =Apple=. Thus, you can set, for example
+   #+begin_src java :exports code
+   Product product = Product.Apple;
+   #+end_src
+   or execute an expression such as
+   #+begin_src java :exports code
+     if (product == Product.Apple)
+       ;
+   #+end_src
+   Furthermore, data type created with =enum= has similar properties
+   as a class in the sense that it can have fields and methods. For
+   example, =Product= has a field =priceCents= and a constructor
+   =Product(int)= which sets the price of a product. When identifier
+   =Apple= is declared inside =Product= its size is set there (take a
+   look at the file).
+
+** License
+   Copyright (C) 2020 Jarmo Hurri
+
+   This program is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation, either version 3 of the License, or
+   (at your option) any later version.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with this program.  If not, see <https://www.gnu.org/licenses/>.
