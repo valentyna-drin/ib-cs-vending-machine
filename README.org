@@ -37,7 +37,7 @@
    example, =Product= has a field =priceCents=, an associated getter
    function, and a constructor =Product(int)= which sets the price of
    a product. When identifier =Apple= is declared inside =Product= its
-   size is set there (take a look at the file).
+   price is set (take a look at the file).
 
 ** License
    Copyright (C) 2020 Jarmo Hurri
