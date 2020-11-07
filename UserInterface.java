@@ -22,11 +22,14 @@ public class UserInterface implements AutoCloseable
     scanner = new Scanner (System.in);
   }
 
+  // needed for implementation of AutoCloseable
   public void close ()
   {
-    scanner.close ();
+    if (scanner != null)
+      scanner.close ();
   }
 
+  // returns the product chosen by the customer
   public Product getProduct (Product[] availableProducts)
   {
     System.out.println ("Available products:");
@@ -51,6 +54,7 @@ public class UserInterface implements AutoCloseable
     return selectedProduct;
   }
 
+  // returns true if the customer verifies payment and false otherwise
   public boolean verifyPayment (Product product)
   {
     // code to be written
