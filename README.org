@@ -5,30 +5,39 @@
 
 ** Installation in IDEA
    To install the application in IDEA, do the following:
-   a) Clone the repository.
-   b) Right click on class =VendingMachineApp=.
-   c) Select =Run VendingMachineApp.main()=
+   1. Clone the repository.
+   2. Right click on class =VendingMachineApp=.
+   3. Select =Run VendingMachineApp.main()=
    You are now able to make changes to the project and run it again.
 
+** Alternative installation from command line
+   1. Clone repository.
+   2. Inside repo, run =ant= to build the app.
+   3. Run app with
+      #+begin_src sh
+        java -jar build/jar/VendingMachineApp.jar
+      #+end_src
+   
 ** Java =enum=
    In this application, data type =Product= is a Java =enum=, which
    allows you to create a data type with a finite number of possible
-   values. In this case, the possible values of =Product= are
-   initially =Beverage= and =Apple=. Thus, you can set, for example
+   values (\ldquo{}subtypes\rdquo). In this case, the possible values
+   of =Product= are initially =Beverage= and =Apple=. Thus, you can
+   set, for example
    #+begin_src java :exports code
    Product product = Product.Apple;
    #+end_src
-   or execute an expression such as
+   or evaluate an expression such as
    #+begin_src java :exports code
      if (product == Product.Apple)
        ;
    #+end_src
    Furthermore, data type created with =enum= has similar properties
    as a class in the sense that it can have fields and methods. For
-   example, =Product= has a field =priceCents= and a constructor
-   =Product(int)= which sets the price of a product. When identifier
-   =Apple= is declared inside =Product= its size is set there (take a
-   look at the file).
+   example, =Product= has a field =priceCents=, an associated getter
+   function, and a constructor =Product(int)= which sets the price of
+   a product. When identifier =Apple= is declared inside =Product= its
+   size is set there (take a look at the file).
 
 ** License
    Copyright (C) 2020 Jarmo Hurri
