@@ -21,9 +21,9 @@ public class Shelf
     products = new Product [NUM_PRODUCT_TYPES];
     quantities = new int [NUM_PRODUCT_TYPES];
     
-    products [0] = Beverage;
+    products [0] = Product.Beverage;
     quantities [0] = 10;
-    products [1] = Apple;
+    products [1] = Product.Apple;
     quantities [1] = 5;
   }
 

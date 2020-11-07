@@ -13,12 +13,12 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-public enum Product
+enum Product
 {
   Beverage (120), Apple (65);
 
   private int priceCents;
-  public Product (int priceCents)
+  Product (int priceCents)
   {
     this.priceCents = priceCents;
   }

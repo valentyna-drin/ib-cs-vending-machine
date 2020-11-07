@@ -14,7 +14,6 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import java.util.Scanner;
-import ibadts.IBCollection;
 
 public class UserInterface implements AutoCloseable
 {
@@ -34,20 +33,27 @@ public class UserInterface implements AutoCloseable
     for (int i = 0; i < availableProducts.length; i++)
       System.out.println ("id " + i + ": " + availableProducts [i]);
 
-    boolean selected = false;
-    while (!selected)
+    Product selectedProduct = null;
+    while (selectedProduct == null)
     {
       System.out.print ("Give id of selected item and press enter: ");
       if (scanner.hasNextInt ())
       {
-        int id = scannerNextInt ();
+        int id = scanner.nextInt ();
         if (id >= 0 && id < availableProducts.length)
-          return availableProducts [id];
+          selectedProduct =  availableProducts [id];
       }
       else
         scanner.nextLine ();
     }
+
+    return selectedProduct;
   }
 
+  public boolean verifyPayment (Product product)
+  {
+    return false;
+  }
+  
   private Scanner scanner;
 }
