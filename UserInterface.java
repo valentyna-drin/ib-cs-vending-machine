@@ -37,14 +37,15 @@ public class UserInterface implements AutoCloseable
     while (selectedProduct == null)
     {
       System.out.print ("Give id of selected item and press enter: ");
+      System.out.flush ();
       if (scanner.hasNextInt ())
       {
         int id = scanner.nextInt ();
         if (id >= 0 && id < availableProducts.length)
           selectedProduct =  availableProducts [id];
       }
-      else
-        scanner.nextLine ();
+
+      scanner.nextLine ();
     }
 
     return selectedProduct;
@@ -52,6 +53,7 @@ public class UserInterface implements AutoCloseable
 
   public boolean verifyPayment (Product product)
   {
+    // code to be written
     return false;
   }
   
