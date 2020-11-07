@@ -40,7 +40,7 @@ public class Shelf
   public boolean isEmpty ()
   {
     // code to be written
-    return true;
+    return false;
   }
   
   public void decreaseQuantity (Product product)
