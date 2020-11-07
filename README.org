@@ -1,7 +1,7 @@
-* Simple vendimg machine application for practicing MVC
+* Simple vending machine application for practicing MVC
 ** The purpose of this repository
    This repository contains the bare bones of an application for
-   practicing model-view-controller (MVC) architecture..  
+   practicing model-view-controller (MVC) architecture.
 
 ** Installation in IDEA
    To install the application in IDEA, do the following:
@@ -14,7 +14,7 @@
    In this application, data type =Product= is a Java =enum=, which
    allows you to create a data type with a finite number of possible
    values. In this case, the possible values of =Product= are
-   =Beverage= and =Apple=. Thus, you can set, for example
+   initially =Beverage= and =Apple=. Thus, you can set, for example
    #+begin_src java :exports code
    Product product = Product.Apple;
    #+end_src
