@@ -1,5 +1,5 @@
 <project name="vending-machine" default="jar" basedir=".">
-  <property name="main-class" value="VendingMachineApp"/>
+  <property name="main-class" value="Main"/>
   <property name="build-dir" value="build"/>
   <property name="class-dir" value="${build-dir}/class"/>
   <property name="jar-dir" value="${build-dir}/jar"/>
