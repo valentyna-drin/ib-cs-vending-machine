@@ -13,21 +13,26 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-public class Main
+public class VendingMachine
 {
-  public static void main (String[] args)
+  public VendingMachine (Shelf shelf, UserInterface ui)
   {
-    try (UserInterface ui = new UserInterface ())
+    this.shelf = shelf;
+    this.ui = ui;
+  }
+
+  // application logic
+  public void run ()
+  {
+    while (!shelf.isEmpty ())
     {
-      Shelf shelf = new Shelf ();
-      VendingMachine vendingMachine = new VendingMachine (shelf, ui);
-      vendingMachine.run ();
-    }
-    catch (Exception e)
-    {
-      System.out.println ("got exception [ " + e + " ], exiting...");
-      System.exit (1);
+      Product[] availableProducts = shelf.getAvailableProducts ();
+      Product purchasedProduct = ui.getProduct (availableProducts);
+      if (ui.verifyPayment (purchasedProduct))
+        shelf.dispense (purchasedProduct);
     }
   }
 
+  private Shelf shelf;
+  private UserInterface ui;
 }
