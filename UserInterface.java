@@ -23,6 +23,7 @@ public class UserInterface implements AutoCloseable
   }
 
   // needed for implementation of AutoCloseable
+  @Override
   public void close ()
   {
     if (scanner != null)

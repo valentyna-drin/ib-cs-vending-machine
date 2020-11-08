@@ -13,12 +13,12 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-public class VendingMachine
+public class VendingMachine implements AutoCloseable
 {
-  public VendingMachine (Shelf shelf, UserInterface ui)
+  public VendingMachine ()
   {
-    this.shelf = shelf;
-    this.ui = ui;
+    this.shelf = new Shelf ();
+    this.ui = new UserInterface ();
   }
 
   // application logic
@@ -31,6 +31,13 @@ public class VendingMachine
       if (ui.verifyPayment (purchasedProduct))
         shelf.dispense (purchasedProduct);
     }
+  }
+
+  @Override
+  public void close ()
+  {
+    if (ui != null)
+      ui.close ();
   }
 
   private Shelf shelf;

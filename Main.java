@@ -17,10 +17,8 @@ public class Main
 {
   public static void main (String[] args)
   {
-    try (UserInterface ui = new UserInterface ())
+    try (VendingMachine vendingMachine = new VendingMachine ())
     {
-      Shelf shelf = new Shelf ();
-      VendingMachine vendingMachine = new VendingMachine (shelf, ui);
       vendingMachine.run ();
     }
     catch (Exception e)
@@ -29,5 +27,4 @@ public class Main
       System.exit (1);
     }
   }
-
 }
