@@ -6,8 +6,8 @@
 ** Installation in IDEA
    To install the application in IDEA, do the following:
    1. Clone the repository.
-   2. Right click on class =VendingMachineApp=.
-   3. Select =Run VendingMachineApp.main()=
+   2. Right click on class =Main=.
+   3. Select =Run Main.main()=
    You are now able to make changes to the project and run it again.
 
 ** Alternative installation from command line
