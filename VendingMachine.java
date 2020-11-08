@@ -27,7 +27,7 @@ public class VendingMachine implements AutoCloseable
     while (!shelf.isEmpty ())
     {
       Product[] availableProducts = shelf.getAvailableProducts ();
-      Product purchasedProduct = ui.getProduct (availableProducts);
+      Product purchasedProduct = ui.getChosenProduct (availableProducts);
       if (ui.verifyPayment (purchasedProduct))
         shelf.dispense (purchasedProduct);
     }

@@ -31,7 +31,7 @@ public class UserInterface implements AutoCloseable
   }
 
   // returns the product chosen by the customer
-  public Product getProduct (Product[] availableProducts)
+  public Product getChosenProduct (Product[] availableProducts)
   {
     System.out.println ("Available products:");
     for (int i = 0; i < availableProducts.length; i++)
