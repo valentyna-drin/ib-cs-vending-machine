@@ -19,18 +19,15 @@ enum Product
 
   private int priceCents;
 
-  Product (int priceCents)
-  {
+  Product (int priceCents) {
     this.priceCents = priceCents;
   }
 
-  public int getPriceCents ()
-  {
+  public int getPriceCents () {
     return priceCents;
   }
   
-  public String toString ()
-  {
+  public String toString () {
     return (name ()) + " (" + priceCents + " cents)";
   }
 }

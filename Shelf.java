@@ -30,27 +30,38 @@ public class Shelf
   // returns an array of products available (for which quantity is positive)
   public Product[] getAvailableProducts ()
   {
-    java.util.ArrayList<Product> availableProducts = new java.util.ArrayList<> ();
+    java.util.ArrayList<Product> availableProd = new java.util.ArrayList<> ();
     for (int i = 0; i < products.length; i++)
       if (quantities [i] > 0)
-        availableProducts.add (products [i]);
+        availableProd.add (products [i]);
 
-    return availableProducts.toArray (new Product [0]);
+    return availableProd.toArray (new Product [0]);
   }
   
   // returns true if there are no more products to be sold and false
   // otherwise
   public boolean isEmpty ()
   {
-    // code to be written
-    return false;
+    int count = 0;
+    for (int quant : quantities) {
+      if (quant == 0) {
+        count++;
+      }
+    }
+    return count == quantities.length;
   }
   
   // dispenses a product (that is, in this simple app just decreases
   // its quantity by 1)
-  public void dispense (Product product)
+  public void dispense (Product dispProduct)
   {
-    // code to be written
+    int ind = 0;
+    for (int i = 0; i < products.length; i++) {
+      if(products[i] == dispProduct) {
+        ind = i;
+      }
+    }
+    quantities[ind]--;
   }
   
   Product[] products;

@@ -58,8 +58,10 @@ public class UserInterface implements AutoCloseable
   // returns true if the customer verifies payment and false otherwise
   public boolean verifyPayment (Product product)
   {
-    // code to be written
-    return false;
+    System.out.println("Type name of the product to confirm");
+    System.out.flush ();
+    String wrProd = scanner.nextLine();
+    return wrProd.equals(product.name());
   }
   
   private Scanner scanner;
